@@ -3,7 +3,7 @@
 
 # Equation: HHI = sum(s_i^2)
 # s_i = market share of firm i
-# Market shares are estimated based on production values minus exports values
+# Market shares are estimated based on the domestic industry revenue values (excluding the revenues from abroad), assuming that the industry activities are dominated by sales
 # theres is no sales data for each firm
 
 import pandas as pd
