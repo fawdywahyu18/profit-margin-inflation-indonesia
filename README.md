@@ -3,5 +3,5 @@ The codes are based on the research about the share of profit margin behavior in
 
 ## Guide to Install (easy install)
 1. Activate the virtual environment
-2. In installing the setup via `setup.py': `pip install -e .`
+2. In installing the setup via `setup.py'   : `pip install -e .`
 3. You can read `run-functions.py` on how to run the `estimations-all.py`.
