@@ -9,10 +9,6 @@ Estimation for all the function in the "unveiling the supply side inflation in I
 
 import pandas as pd
 
-deflator = pd.read_excel('Deflator Indonesia.xlsx', sheet_name='Deflator Indonesia')
-deflator.set_index('Year', inplace=True)
-
-
 # Creating the function to generate Real Variables and Nominal Variables
 
 def analisis_dasar(tahun):
@@ -25,6 +21,10 @@ def analisis_dasar(tahun):
                             convert_categoricals=True,
                             convert_missing=False, 
                             preserve_dtypes=True)
+
+    # Import data deflator
+    deflator = pd.read_excel('Deflator Indonesia.xlsx', sheet_name='Deflator Indonesia')
+    deflator.set_index('Year', inplace=True)
     
     # Data Upah
     ibs_copy = ibs_dta.copy()
@@ -104,7 +104,11 @@ def analisis_dasar_csv(tahun):
     # Read the .csv file using pandas
     ibs_csv = pd.read_csv(f'Data Industri Besar Sedang BPS/ibs_{tahun}.csv',
                           low_memory=False)
-    
+
+    # Import data deflator
+    deflator = pd.read_excel('Deflator Indonesia.xlsx', sheet_name='Deflator Indonesia')
+    deflator.set_index('Year', inplace=True)
+
     # Data Upah
     ibs_copy = ibs_csv.copy()
     ibs_copy.rename(columns=lambda x: x.lower(), inplace=True)
@@ -152,6 +156,10 @@ def analisis_dasar_csv_07(tahun):
     # Read the .csv file using pandas
     ibs_csv = pd.read_csv(f'Data Industri Besar Sedang BPS/ibs_{tahun}.csv',
                           low_memory=False)
+
+    # Import data deflator
+    deflator = pd.read_excel('Deflator Indonesia.xlsx', sheet_name='Deflator Indonesia')
+    deflator.set_index('Year', inplace=True)
     
     # Data Upah
     ibs_copy = ibs_csv.copy()
